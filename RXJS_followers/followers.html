@@ -6,25 +6,13 @@
     <script src="http://localhost:9090/livereload.js"></script>
     <script type="text/javascript" src="scripts/rx.all.js"></script>
     <script type="text/javascript" src="scripts/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
     <script type="text/javascript">
         $(document).ready(init);
-
-        function init(){
-            console.log("doc ready");
-            var requestUrl='https://api.github.com/users';
-
-            var requestStream=Rx.Observable.just(requestUrl);
-
-            requestStream.subscribe(function(reqUrl){
-                jQuery.getJSON(reqUrl, function(responseData){
-                    console.log(responseData);
-                });
-            });
-
-        }
     </script>
 </head>
 <body>
+<input type="button" class="refresh" value="Refresh">
 <h4>alex</h4>
 </body>
 </html>

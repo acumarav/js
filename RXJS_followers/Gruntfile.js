@@ -3,7 +3,7 @@ module.exports = function(grunt){
 
         watch :{
         scripts :{
-            files:["*.js","*.html"],
+            files:["*.js","*.html","scripts/*.js"],
             options: {livereload: 9090}
         }
     }
